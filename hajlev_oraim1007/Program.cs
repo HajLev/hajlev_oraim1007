@@ -22,8 +22,9 @@ namespace hajlev_oraim1007
             Console.ReadKey();
             Console.Clear();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 300; i++)
             {
+                RandomSin();
                 RandomHelyreIr();
             }
              Console.WriteLine();
@@ -63,8 +64,23 @@ namespace hajlev_oraim1007
                 ) ;
             Console.Write("*");
         }
-        
 
+        // 5. fealdat
+        static void RandomSin() {
+            ConsoleColor[] szinek =
+            {
+                ConsoleColor.Red,
+                ConsoleColor.Yellow,
+                ConsoleColor.Blue,
+                ConsoleColor.Cyan,
+                ConsoleColor.Magenta,
+                ConsoleColor.DarkCyan,
+                ConsoleColor.Gray,
+                ConsoleColor.DarkGreen,
+
+            };
+            Console.ForegroundColor = szinek[rnd.Next(szinek.Length)];
+        }
 
 
 
